@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+
+<h2 class="fade-in">All Posts</h2>
+
+{% for post in posts %}
+<div class="card">
+    <h3>{{ post.title }}</h3>
+    <p>By {{ post.author.username }}</p>
+
+    {% if post.image %}
+        <img src="{{ url_for('static', filename='uploads/' + post.image) }}" class="post-image">
+    {% endif %}
+
+    <p>Likes: {{ post.likes|length }}</p>
+
+    <a href="/post/{{ post.id }}">
+        <button>Read More</button>
+    </a>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+# Environment
+.env
+
+# Database
+*.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Uploads
+static/uploads/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
